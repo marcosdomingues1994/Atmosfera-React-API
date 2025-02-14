@@ -1,15 +1,12 @@
 import axios from "axios";
 
-// Substitua pela sua chave de API
-const API_KEY = "a91cdbf66c25352d7634297350876661";
+const API_KEY = "SUAKEY";
 
-// URL base correta da OpenWeatherMap
 const BASE_URL = "https://api.openweathermap.org/data/2.5/weather";
 
 const getWeather = async (city, neighborhood = "") => {
   const location = neighborhood ? `${city},${neighborhood}` : city;
 
-  // Construir a URL com o endpoint correto
   const url = `${BASE_URL}?q=${location}&appid=${API_KEY}&units=metric&lang=pt`;
 
   try {
